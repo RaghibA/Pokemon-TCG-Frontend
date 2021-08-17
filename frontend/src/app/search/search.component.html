@@ -1,0 +1,25 @@
+<div class="search-container">
+  <h2 class="text-secondary">Welcome to PokeTCG.</h2>
+  <p class='text-light'>Enter the name of a pokemon card below to add to your virtual deck!</p>
+  <div class="card-search">
+    <form class='form' (submit)="onFindCards(query)" #query="ngForm">
+      <input class='search-bar' type="text" name="pokemon" placeholder="Card Name" ngModel>
+      <button class='search-btn' type="submit">Find</button>
+    </form>
+  </div>
+</div>
+
+<div class="card-results">
+  <h3 class="text-secondary" *ngIf="cards.length > 0">Results for {{ pokemon }}</h3>
+  <div class="card-display">
+    <div class="card" *ngFor='let card of cards; let indexOfelement=index;'>
+      <h4 class="card-name text-secondary">{{ card.pokemon }}</h4>
+      <img *ngIf="card.img != ''" class="card-img" mat-card-image src={{card.img}} alt="Photo of {{card.pokemon}} Card">
+      <div class="card-actions">
+        <button *ngIf='loggedIn' class="add-card card-btn">ADD</button>
+        <button disabled *ngIf='!loggedIn' title="Log in to add cards" class="add-card card-btn">ADD</button>
+        <button class="card-info card-btn" (click)='onCardInfo(indexOfelement)'>INFO</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="navbar bg-primary">
+  <div class="logo">
+    <h2 class="nav-logo text-primary">PokeTCG</h2>
+  </div>
+  <div class="nav-menu">
+    <button id="search-btn" class='menu-item nav-btn text-primary'>Search</button>
+    <button id="about-btn" class='menu-item nav-btn text-primary'>About</button>
+    <button id="profile-btn" *ngIf='loggedIn' class='menu-item nav-btn text-primary'>Profile</button>
+    <button id="login-btn" *ngIf='!loggedIn' class='menu-item nav-btn text-primary'>Log In</button>
+  </div>
+</div>

@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+:root {
+  --primary-color: #FFD369;
+  --primary-hl-color: #ccab5e;
+  --accent-color: #393E46;
+  --accent-hl-color: #4e5258;
+  --secondary-color: #222831;
+  --secondary-hl-color: #666f7d;
+  --light-color: #EEEEEE;
+  --light-hl-color: #bebdbc;
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+/* Utility Styles */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--secondary-color);
+}
+
+.text-secondary {
+  color: var(--primary-color);
+}
+
+.text-secondary-hl {
+  color: var(--secondary-hl-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+.text-light-hl {
+  color: var(--light-hl-color)
+}
+
+.btn {
+  color: var(--secondary-color);
+}
