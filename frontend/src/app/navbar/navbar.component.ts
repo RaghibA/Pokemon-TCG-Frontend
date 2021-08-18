@@ -12,8 +12,6 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const searchBtn = document.getElementById('search-btn')
-    searchBtn?.classList.add('active')
   }
 
 }

@@ -3,9 +3,9 @@
     <h2 class="nav-logo text-primary">PokeTCG</h2>
   </div>
   <div class="nav-menu">
-    <button id="search-btn" class='menu-item nav-btn text-primary'>Search</button>
-    <button id="about-btn" class='menu-item nav-btn text-primary'>About</button>
-    <button id="profile-btn" *ngIf='loggedIn' class='menu-item nav-btn text-primary'>Profile</button>
-    <button id="login-btn" *ngIf='!loggedIn' class='menu-item nav-btn text-primary'>Log In</button>
+    <button routerLink='/search' routerLinkActive='active' id="search-btn" class='menu-item nav-btn text-primary'>Search</button>
+    <button routerLink='/about' id="about-btn" class='menu-item nav-btn text-primary'>About</button>
+    <button routerLink='/profile' id="profile-btn" *ngIf='loggedIn' class='menu-item nav-btn text-primary'>Profile</button>
+    <button routerLink='/login' id="login-btn" *ngIf='!loggedIn' class='menu-item nav-btn text-primary'>Log In</button>
   </div>
 </div>

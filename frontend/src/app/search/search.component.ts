@@ -28,6 +28,15 @@ export class SearchComponent{
   constructor(private searchService: SearchService) { }
 
   ngOnInit() {
+    // Make nav menu active
+    const searchBtn = document.getElementById('search-btn')
+    searchBtn?.classList.add('active')
+
+    const loginBtn = document.getElementById('login-btn')
+    loginBtn?.classList.remove('active')
+    const aboutBtn = document.getElementById('about-btn')
+    aboutBtn?.classList.remove('active')
+
     // check login status
   }
   

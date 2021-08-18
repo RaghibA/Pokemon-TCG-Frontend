@@ -137,8 +137,8 @@
   margin: 0 4px;
   font-size: 12px;
   border-radius: 5px;
-  background: rgba(107, 107, 107, 0.2);
-  color: var(--secondary-color);
+  background: rgba(0,0,0,0.1);
+  color: var(--primary-color);
   outline: none;
   border: none;
   cursor: pointer;
@@ -146,8 +146,7 @@
 }
 
 .card-btn:hover {
-  background: rgba(0,0,0,0.1);
-  color: var(--primary-color);
+  background: var(--secondary-color);
   transition: all .15s ease-in-out;
 }
 
@@ -157,13 +156,14 @@
 
 button:disabled,
 button[disabled]{
-  background-color: var(--accent-color);
+  background: var(--accent-hl-color);
   color: #666666;
   cursor: default;
 }
 
 button:disabled:hover,
 button[disabled]:hover{
-  background-color: var(--accent-color);
+  background: var(--accent-hl-color);
   color: #666666;
+  cursor: default;
 }
