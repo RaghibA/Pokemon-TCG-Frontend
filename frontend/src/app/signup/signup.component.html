@@ -1,0 +1,11 @@
+<div class="login-container">
+  <div class="form-control">
+    <form class="signup-form" (submit)="onSignUp(loginForm)" #loginForm="ngForm">
+      <h3 class="text-primary">Create account</h3>
+      <input name='username' placeholder="Username" type="text" class="login-field">
+      <input name="password" placeholder="Password" type="password" class="login-field">
+      <input name="password" placeholder="Confirm Password" type="password" class="login-field">
+      <button class="login-btn" type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>

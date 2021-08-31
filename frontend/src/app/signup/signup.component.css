@@ -14,7 +14,7 @@
   border-bottom: 1px solid rgba(44, 44, 44, 0.4);
 }
 
-.login-form {
+.signup-form {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -60,32 +60,5 @@
 }
 
 .login-btn:active {
-  transform: translateY(4px);
-}
-
-.sign-up {
-  padding: 2rem 0 0 0;
-}
-
-.signup-btn {
-  background: var(--accent-hl-color);
-  border-radius: 25px;
-  color: var(--light-hl-color);
-  border: none;
-  cursor: pointer;
-  margin: 1rem 0;
-  height: 40px;
-  width: 80px;
-  align-self: center;
-  justify-self: center;
-}
-
-.signup-btn:hover {
-  background: var(--secondary-hl-color);
-  color: var(--primary-color);
-  transition: all .25s ease;
-}
-
-.signup-btn:active {
   transform: translateY(4px);
 }

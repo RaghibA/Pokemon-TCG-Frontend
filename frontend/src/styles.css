@@ -26,12 +26,24 @@ body {
   background-color: var(--primary-color);
 }
 
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
 .text-primary {
   color: var(--secondary-color);
 }
 
 .text-secondary {
   color: var(--primary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.text-accent-hl {
+  color: var(--accent-hl-color);
 }
 
 .text-secondary-hl {

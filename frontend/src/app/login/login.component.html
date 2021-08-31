@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="login-container">
+  <div class="form-control">
+    <form class="login-form" (submit)="onLogIn(loginForm)" #loginForm="ngForm">
+      <h3 class="text-primary">Log In</h3>
+      <input name='username' placeholder="Username" type="text" class="login-field">
+      <input name="password" placeholder="Password" type="password" class="login-field">
+      <button class="login-btn" type="submit">Log In</button>
+    </form>
+    <h1 *ngIf='authenticated' class="text-primary">Logged in</h1>
+    <h1 *ngIf='!authenticated' class="text-primary">Logged out</h1>
+  </div>
+
+  <div class="sign-up">
+    <h4 class="text-secondary">Don't have an accout? Create one today to start your deck!</h4>
+
+    <button routerLink='/signup' class="signup-btn">Sign Up</button>
+
+  </div>
+</div>

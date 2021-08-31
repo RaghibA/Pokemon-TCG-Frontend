@@ -3,18 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule, RoutingComponents } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+// Services
 import { SearchService } from './services/search.service';
+import { AuthService } from './services/auth.service';
+import { TokenService } from './services/token.service';
+
+// Components
+import { AppComponent } from './app.component';
+import { AppRoutingModule, RoutingComponents } from './app-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     RoutingComponents,
-    ProfileComponent
+    ProfileComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +30,9 @@ import { ProfileComponent } from './profile/profile.component';
     FormsModule
   ],
   providers: [
-    SearchService
+    SearchService,
+    AuthService,
+    TokenService
   ],
   bootstrap: [AppComponent]
 })

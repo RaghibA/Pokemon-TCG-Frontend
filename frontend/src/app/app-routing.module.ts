@@ -4,13 +4,15 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchComponent } from './search/search.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'search', pathMatch: 'full' },
   { path: 'search', component: SearchComponent},
   { path: 'login', component: LoginComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'signup', component: SignupComponent}
 ];
 
 @NgModule({
