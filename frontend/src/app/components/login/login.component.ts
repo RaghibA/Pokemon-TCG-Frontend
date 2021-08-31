@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { User } from '../models/user.model';
+import { Router } from '@angular/router';
 
-import { AuthService } from '../services/auth.service';
-import { TokenService } from '../services/token.service';
+import { AuthService } from '../../services/auth.service';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +11,9 @@ import { TokenService } from '../services/token.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private tokenService: TokenService) { }
+  constructor(private authService: AuthService,
+    private tokenService: TokenService,
+    private router: Router) { }
 
   ngOnInit(): void {
     // Make nav menu active
@@ -26,21 +27,22 @@ export class LoginComponent implements OnInit {
     aboutBtn?.classList.remove('active')
   }
 
-  authenticated = false
+  username = ''
+  password = ''
 
-  onLogIn(loginForm: NgForm) {
-    const user = loginForm.value.username
-    const pass = loginForm.value.password
+  onLogIn() {
 
-    this.authService.login(user, pass)
+    console.log(this.username)
+    console.log(this.password)
+
+    this.authService.login(this.username, this.password)
       .subscribe((response: any) => {
         if (response.token) {
           // Authenticate user
-          this.authenticated = true
           this.tokenService.set('currentUser', response.token)
+          this.router.navigate(['/profile'])
         }
       })
-    // validate
     // if fail, alert
     // else change login status
   }

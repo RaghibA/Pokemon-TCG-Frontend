@@ -11,9 +11,11 @@ import { TokenService } from './services/token.service';
 // Components
 import { AppComponent } from './app.component';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SignupComponent } from './signup/signup.component';
+import { NavbarComponent } from './components/navbar/navbar.component'
+import { ProfileComponent } from './components/profile/profile.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { SearchComponent } from './components/search/search.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SignupComponent } from './signup/signup.component';
     NavbarComponent,
     RoutingComponents,
     ProfileComponent,
-    SignupComponent
+    SignupComponent,
+    SearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

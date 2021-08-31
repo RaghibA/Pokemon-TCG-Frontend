@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from './token.service'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { NgForm } from '@angular/forms';
 
 import { User } from '../models/user.model';
 
@@ -14,6 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient, private tokenService: TokenService) { }
 
   login(username: string, password: string) {
+    console.log(username + password)
     return this.http.post<User>(this.baseURL + 'users/login', { username, password })
   }
 

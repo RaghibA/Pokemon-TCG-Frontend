@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SearchComponent } from './search/search.component';
-import { SignupComponent } from './signup/signup.component';
+import { AboutComponent } from './components/about/about.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SearchComponent } from './components/search/search.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'search', pathMatch: 'full' },

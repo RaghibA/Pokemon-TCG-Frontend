@@ -1,0 +1,17 @@
+<div class="login-container">
+  <div class="form-control">
+    <form class="login-form" #loginForm="ngForm">
+      <h3 class="text-primary">Log In</h3>
+      <input name='username' [(ngModel)]="username" placeholder="Username" type="text" class="login-field">
+      <input name="password" [(ngModel)]="password" placeholder="Password" type="password" class="login-field">
+      <button class="login-btn" (click)="onLogIn()">Log In</button>
+    </form>
+  </div>
+
+  <div class="sign-up">
+    <h4 class="text-secondary">Don't have an accout? Create one today to start your deck!</h4>
+
+    <button routerLink='/signup' class="signup-btn">Sign Up</button>
+
+  </div>
+</div>

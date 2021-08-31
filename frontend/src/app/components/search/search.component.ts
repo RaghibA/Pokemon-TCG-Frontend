@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { SearchService } from '../services/search.service';
+import { SearchService } from '../../services/search.service';
 
-import { Card } from '../models/card.model';
+import { Card } from '../../models/card.model';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-search',
@@ -25,7 +26,8 @@ export class SearchComponent{
     logo: ''
   }
 
-  constructor(private searchService: SearchService) { }
+  constructor(private searchService: SearchService,
+              private authService: AuthService) { }
 
   ngOnInit() {
     // Make nav menu active
@@ -36,8 +38,17 @@ export class SearchComponent{
     loginBtn?.classList.remove('active')
     const aboutBtn = document.getElementById('about-btn')
     aboutBtn?.classList.remove('active')
+    const profileBtn = document.getElementById('profile-btn')
+    profileBtn?.classList.remove('active')
 
     // check login status
+    this.authService.viewUser().subscribe(
+      (response) => {
+        if (response.username) {
+          this.loggedIn = true
+        }
+      }
+    )
   }
   
   // find cards
